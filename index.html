@@ -1,0 +1,42 @@
+<?php
+session_start();
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAFA Player Registration</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+             /* addded background image */
+        background-image: url('images/ea-sports-fc-24-football-stadium-4k-wallpaper-uhdpaper.com-129@1@m.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to SAFA</h1>
+            <p>Register and manage football players effortlessly</p>
+        </header>
+        <main>
+            <a href="login.php" class="btn">Login</a>
+        </main>
+        <footer>
+            <p>&copy; 2025 South African Football Association</p>
+        </footer>
+    </div>
+</body>
+</html>
